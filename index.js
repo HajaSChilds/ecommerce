@@ -17,6 +17,30 @@ function roll(min, max, floatFlag) {
   //  height: roll(5.1,6.1, 1).toFixed(1)
  //}
 
-console.log(user);
+//console.log(user);
 
 let possibleProducts = ["apple", "grapes", "watermelon", "orange", "peach", "lemon", "banana", "pineapple", "mango", "cherry", "green apple", "strawberry", "kiwi", "tomato", "coconut", "avocado", "eggplant", "potato", "carrots", "corn", "chili", "cucumber", "lettuce", "broccoli"]
+
+let products = [Array(5)].map((_, i) => {
+    return {
+        index: i,
+        title: possibleProducts[roll(0, possibleProducts.length)],
+        price: roll(1,10, 1).toFixed(2),
+        count: roll(1,6)
+    }
+});
+console.log(products);
+
+let productsElement = document.getElementById("Products")
+
+let cartHtml = ''
+products.forEach(function(product) {
+    cartHtml += `<div class="product">
+        <div>${product.title}</div>
+        <div>${product.price}</div>
+        <div>${product.count}</div>
+        </div>`
+
+})
+
+productsElement.innerHTML = cartHtml

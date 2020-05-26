@@ -34,6 +34,19 @@
 
         }
 
+        .product {
+            font-size: 1.8rem;
+            display: flext;
+            padding: 0.5rem;
+            margin: 0.4rem;
+            background-color: lightgreen;
+            border: black 2px solid;
+        }
+
+        .product div {
+            width: calc(100% / 3);
+        }
+
         footer {
             background-color: lightgreen;
             font-size: var(--footerFontSize);
@@ -45,10 +58,11 @@
 </head>
 <body>
     <header>
-        <h1>Shopping Cart</h1>
-    </header>
-    <main>
+        <h1>Shopping Cart<img src="icons8-favorite-cart-100.png"/> </h1>
        
+    </header>
+    <main id = "ShoppingCart">
+        <div id="Products"></div>   
     </main>
     <footer><a target="_blank" href="https://icons8.com/icons/set/favorite-cart">Favorite Cart icon</a> icon by <a target="_blank"
         href="https://icons8.com">Icons8</a></footer>
